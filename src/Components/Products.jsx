@@ -1,7 +1,11 @@
-import React from 'react'
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import ProductBox from './ProductBox'
 import p1image from '../images/s1.png'
+
 const Products = () => {
+  
   return (
     <div id='products'>
         <h1>TITULO</h1>

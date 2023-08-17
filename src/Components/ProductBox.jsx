@@ -5,7 +5,10 @@ const ProductBox = (props) => {
     <div className='a-box'>
         <div className="a-b-image">
 
-        <img src={props.image} alt="" />
+        <img src={props.image} 
+        alt=""
+         width="300" // Establecer el ancho
+        height="200" />
         </div>
     
     <div className="a-b-text">

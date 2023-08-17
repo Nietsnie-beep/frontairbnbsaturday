@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar';
 import './App.css'
 import Header from './Components/Header';
 import Products from './Components/Products';
+import ListaHotel from './Components/ListaHotel';
 
 function App() {
 
@@ -33,7 +34,7 @@ function App() {
         <>
         <Navbar />
         <Header />
-        <Products/>
+        <ListaHotel/>
           </>
       }
     </div>
