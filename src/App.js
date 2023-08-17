@@ -1,23 +1,41 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import {css} from "@emotion/core";
+import PropagateLoader  from 'react-spinners/PropagateLoader';
+import Navbar from './Components/Navbar';
+
+import './App.css'
+import Header from './Components/Header';
+import Products from './Components/Products';
 
 function App() {
+
+  const [loading, setLoading] = useState(false);
+  const override = css`
+  display:block;
+  border-color:red;
+  margin-top:20%;
+  `;
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 5000);
+  },[])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        loading ? <PropagateLoader color={"#3d2514"} loading={loading} css={override} size= {40} />
+        :
+        <>
+        <Navbar />
+        <Header />
+        <Products/>
+          </>
+      }
     </div>
   );
 }
