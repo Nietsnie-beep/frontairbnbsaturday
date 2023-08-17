@@ -8,6 +8,10 @@ import Navbar from './Components/Navbar';
 import './App.css'
 import Header from './Components/Header';
 import Products from './Components/Products';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Detail from './Components/Detail';
+import Inicio from './pages/Inicio';
 
 function App() {
 
@@ -27,15 +31,17 @@ function App() {
 
   return (
     <div className="App">
-      {
-        loading ? <PropagateLoader color={"#3d2514"} loading={loading} css={override} size= {40} />
-        :
-        <>
-        <Navbar />
-        <Header />
-        <Products/>
-          </>
-      }
+      {loading ? (
+        <PropagateLoader color={"#3d2514"} loading={loading} css={override} size={40} />
+      ) : (
+        <Router>
+          <Routes>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/productos" element={<Products />} />
+            <Route path="/detalle" element={<Detail />} />
+          </Routes>
+        </Router>
+      )}
     </div>
   );
 }

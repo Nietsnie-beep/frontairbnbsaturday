@@ -35,7 +35,7 @@ input{
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('./images/banner.png');
+  background-image: url('./images/casa-aislada-campo.jpg');
 }
 nav{
 display: flex;
