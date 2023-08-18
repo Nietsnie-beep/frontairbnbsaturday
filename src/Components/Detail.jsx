@@ -3,7 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import Formulario from './Formulario';
+import Barra from './Barra';
 const Detail = () => {
+
+  
 
   const {id} = useParams();
   
@@ -35,6 +38,7 @@ const Detail = () => {
       <h1>Capacidad {data.capacidad}</h1>
 
       <Formulario data={data}/>
+      
     </div>
   );
 }

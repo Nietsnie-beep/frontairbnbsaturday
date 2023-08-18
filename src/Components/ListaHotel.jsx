@@ -5,8 +5,13 @@ import ProductBox from './ProductBox'
 import p1image from '../images/s1.png'
 import ProductHabitaciones from './ProductHabitaciones';
 import Habitaciones from '../pages/Habitaciones';
+import Barra from './Barra';
 
 const ListaHotel = () => {
+  const handleSearch = (searchData) => {
+    // Lógica de búsqueda utilizando searchData (ubicación, huéspedes, habitaciones)
+    console.log('Datos de búsqueda:', searchData);
+  };
     const [selectedHotel, setSelectedHotel] = useState(null);
     const [data, setData] = useState([]);
 
@@ -29,6 +34,8 @@ const ListaHotel = () => {
   
   return (
     <div id='products'>
+
+
         <h1>HOTELES</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum optio eaque id suscipit voluptas maxime vero quis quibusdam libero tempora sint voluptatem omnis aperiam quo, delectus amet commodi fuga exercitationem.</p>
         <div className="a-container">
