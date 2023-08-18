@@ -22,8 +22,9 @@ const Habitaciones = ({ hotelId }) => {
       })
 
   return (
-    <div>
-      <h2>Habitaciones del Hotel {hotelId}</h2>
+    <div >
+      <h2 className="text-center" >Habitaciones Disponibles</h2>
+      <br />
       <ul>
         {data.map(habitacion => (
             

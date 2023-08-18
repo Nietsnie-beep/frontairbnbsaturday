@@ -25,12 +25,13 @@ const irAPantallaB = (id) => {
 
   return (
     <div id='products'>
-        <h1>TITULO</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum optio eaque id suscipit voluptas maxime vero quis quibusdam libero tempora sint voluptatem omnis aperiam quo, delectus amet commodi fuga exercitationem.</p>
+        <h1>"Comodidad y encanto."</h1>
+        <br/>
+        <p>"Alojamiento que supera expectativas."</p>
         <div className="a-container">
 
         {housing.map(quarters => (
-       <ProductBox image={quarters.mapa} title={quarters.nombre} id={quarters.id}/>
+       <ProductBox image={quarters.mapa} title={quarters.nombre} id={quarters.id} estado ={quarters.estado} calle = {quarters.calle} numero= {quarters.numero} />
 
         ))}
         </div>

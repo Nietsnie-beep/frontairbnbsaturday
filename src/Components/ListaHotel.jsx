@@ -29,8 +29,10 @@ const ListaHotel = () => {
   
   return (
     <div id='products'>
-        <h1>HOTELES</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum optio eaque id suscipit voluptas maxime vero quis quibusdam libero tempora sint voluptatem omnis aperiam quo, delectus amet commodi fuga exercitationem.</p>
+        <h1>"Lujo y confort excepcionales."</h1>
+        <br />
+        <p>"Tu hogar lejos de casa te espera en nuestro hotel, donde cada rincón ha sido creado pensando en tu comodidad y bienestar."</p>
+        
         <div className="a-container">
         {data.map(item => (
           <ProductHabitaciones 
