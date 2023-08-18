@@ -9,7 +9,7 @@ const Products = () => {
 const [housing, setHousing] = useState([])
 const navigate = useNavigate();
 useEffect(() => {
-    axios.get('http://192.168.1.89:8000/alojamientoFiltro/2')
+    axios.get('http://192.168.100.84:8000/alojamientoFiltro/2')
     .then(response => {
       // Actualizar el estado con los datos obtenidos de la API
       setHousing(response.data);

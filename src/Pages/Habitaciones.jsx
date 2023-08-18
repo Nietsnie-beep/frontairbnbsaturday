@@ -8,7 +8,7 @@ const Habitaciones = ({ hotelId }) => {
 
     useEffect(() => {
         // Realizar la solicitud a la API cuando el componente se monta
-        axios.get(`http://192.168.1.89:8000/casaHogarFiltro/${hotelId}`)
+        axios.get(`http://192.168.100.84:8000/casaHogarFiltro/${hotelId}`)
           .then(response => {
             setData(response.data); 
           })

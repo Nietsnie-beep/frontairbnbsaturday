@@ -27,7 +27,7 @@ const ProductBox = (props) => {
     
     <div className="a-b-text">
         <h2>{props.title} </h2>
-        <Link to={`/detalle/${props.id}/${props.capacidad}`}> <button className='productbox-button'> Detalle </button></Link>
+        <Link to={`/detalle/${props.id}`}> <button className='productbox-button'> Detalle </button></Link>
     </div>
     
     </div>
