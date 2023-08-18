@@ -16,20 +16,22 @@ const Navbar = () => {
 
 
   return (
-    <nav className={nav ? "nav active" : "nav"} >
+    <div className="bg-gray-300 p-6">
+
+    <nav className={nav ? "nav active" : "nav"}>
       <Link to='main' className='logo'>
-        {/* <img src="" alt="" /> */}
+        <img src="./images/recepcion.png" alt="" />
       </Link>
       <input className='menu-btn' type='checkbox' id='menu-btn' />
       <label className='menu-icon' for='menu-btn'>
         <span className='nav-icon'> </span>
       </label>
       <ul className='menu'>
-        <li><Link to="#">Header</Link></li>
-        <li><Link to="#">Header</Link></li>
-        <li><Link to="#">Header</Link></li>
+        <li><Link to="/">Inicio</Link></li>
+        <li><Link to="https://beyondhb.com/">Contacto</Link></li>
       </ul>
     </nav>
+    </div>
   )
 }
 

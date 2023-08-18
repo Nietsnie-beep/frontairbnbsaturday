@@ -22,12 +22,13 @@ const ProductBox = (props) => {
     <div className='a-box'>
         <div className="a-b-image" style={containerStyle}>
 
-        <img src={props.image}  alt="" style={imageStyle}/>
+        <img src={props.image} width="300"  height="200" alt="" style={imageStyle}/>
         </div>
     
     <div className="a-b-text">
-        <h2>{props.title} </h2>
+        <h2 className='font-bold mb-3'>{props.estado},{props.calle}, {props.numero}  </h2>
         <Link to={`/detalle/${props.id}`}> <button className='productbox-button'> Detalle </button></Link>
+
     </div>
     
     </div>

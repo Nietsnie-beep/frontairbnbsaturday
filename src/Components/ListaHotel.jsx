@@ -23,7 +23,7 @@ const ListaHotel = () => {
 
     useEffect(() => {
         // Realizar la solicitud a la API cuando el componente se monta
-        axios.get('http://192.168.100.84:8000/alojamientoFiltro/1')
+        axios.get('http://192.168.1.89:8000/alojamientoFiltro/1')
           .then(response => {
             setData(response.data); // Guardar los datos en el arreglo
           })
@@ -34,10 +34,10 @@ const ListaHotel = () => {
   
   return (
     <div id='products'>
-
-
-        <h1>HOTELES</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum optio eaque id suscipit voluptas maxime vero quis quibusdam libero tempora sint voluptatem omnis aperiam quo, delectus amet commodi fuga exercitationem.</p>
+        <h1>"Lujo y confort excepcionales."</h1>
+        <br />
+        <p>"Tu hogar lejos de casa te espera en nuestro hotel, donde cada rincón ha sido creado pensando en tu comodidad y bienestar."</p>
+        
         <div className="a-container">
         {data.map(item => (
           <ProductHabitaciones 
