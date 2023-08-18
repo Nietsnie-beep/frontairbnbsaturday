@@ -5,7 +5,7 @@ import {css} from "@emotion/core";
 import PropagateLoader  from 'react-spinners/PropagateLoader';
 import Navbar from './Components/Navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css'
+
 import Header from './Components/Header';
 import Products from './Components/Products';
 import ListaHotel from './Components/ListaHotel';
@@ -25,7 +25,7 @@ function App() {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 5000);
+    }, 500);
   },[])
 
   return (
@@ -39,7 +39,7 @@ function App() {
             <Route path="/" element={<Inicio />} />
             <Route path="/productos" element={<Products />} />
             <Route path="/hoteles" element={<ListaHotel />} />
-            <Route path="/detalle/:id/:capacidad" element={<Detail />} />
+            <Route path="/detalle/:id/:capacidad/:habitaciones/:camas" element={<Detail />} />
           </Routes>
         </Router>
       )}
