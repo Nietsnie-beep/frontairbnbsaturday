@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react'
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import ProductBox from './ProductBox'
 import p1image from '../images/s1.png'
-import axios from 'axios'
 const Products = () => {
 
 const [housing, setHousing] = useState([])
-
+const navigate = useNavigate();
 useEffect(() => {
-    axios.get('http://192.168.1.83:8000/alojamientoFiltro/2')
+    axios.get('http://192.168.1.89:8000/alojamientoFiltro/2')
     .then(response => {
       // Actualizar el estado con los datos obtenidos de la API
       setHousing(response.data);
@@ -17,6 +19,10 @@ useEffect(() => {
     });
 }, []);
 
+const irAPantallaB = (id) => {
+  navigate(`/detalle/${id}`);
+};
+
   return (
     <div id='products'>
         <h1>TITULO</h1>
@@ -24,7 +30,7 @@ useEffect(() => {
         <div className="a-container">
 
         {housing.map(quarters => (
-        <ProductBox image={quarters.mapa}  title={quarters.nombre}/>
+       <ProductBox image={quarters.mapa} title={quarters.nombre} id={quarters.id}/>
 
         ))}
         </div>

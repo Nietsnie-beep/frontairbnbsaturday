@@ -1,7 +1,10 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-const ProductBox = (props) => {
+import { BrowserRouter as Router, Route, Link, useNavigate  } from 'react-router-dom';
 
+const ProductBox = (props) => {
+  console.log("props", props);
+  const navigate = useNavigate();
+  const datos = props
     const containerStyle = {
         display: 'flex',
         justifyContent: 'center', // Centrar horizontalmente
@@ -14,6 +17,7 @@ const ProductBox = (props) => {
         maxHeight: '100%' // Asegurar que la imagen no exceda la altura del contenedor
       };
 
+  
   return (
     <div className='a-box'>
         <div className="a-b-image" style={containerStyle}>
@@ -23,8 +27,7 @@ const ProductBox = (props) => {
     
     <div className="a-b-text">
         <h2>{props.title} </h2>
-        <Link to='/detalle'> <button className='productbox-button'> Detalle </button></Link>
-     
+        <Link to={`/detalle/${props.id}/${props.capacidad}`}> <button className='productbox-button'> Detalle </button></Link>
     </div>
     
     </div>

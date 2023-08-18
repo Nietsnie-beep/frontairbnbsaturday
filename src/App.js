@@ -4,14 +4,13 @@ import { useEffect, useState } from 'react';
 import {css} from "@emotion/core";
 import PropagateLoader  from 'react-spinners/PropagateLoader';
 import Navbar from './Components/Navbar';
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css'
 import Header from './Components/Header';
 import Products from './Components/Products';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-import Detail from './Components/Detail';
+import ListaHotel from './Components/ListaHotel';
 import Inicio from './pages/Inicio';
+import Detail from './Components/Detail';
 
 function App() {
 
@@ -35,10 +34,12 @@ function App() {
         <PropagateLoader color={"#3d2514"} loading={loading} css={override} size={40} />
       ) : (
         <Router>
+          <Navbar />
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/productos" element={<Products />} />
-            <Route path="/detalle" element={<Detail />} />
+            <Route path="/hoteles" element={<ListaHotel />} />
+            <Route path="/detalle/:id/:capacidad" element={<Detail />} />
           </Routes>
         </Router>
       )}
